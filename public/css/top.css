@@ -1,0 +1,39 @@
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: table;
+    font-weight: bold;
+    font-family: 'Lato';
+}
+hr {
+    height: 0;
+    border: 0;
+    border-top: 1px solid #eeeeee;
+}
+.container {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+.content {
+    text-align: center;
+    display: inline-block;
+}
+.title {
+    font-size: 72px;
+}
+.sub {
+    color: #999;
+    font-size: 14px;
+    font-weight: initial;
+}
+.fa-google:before {
+    content: "\f1a0";
+}
+.btn.focus,.btn:focus,.btn:hover {
+    color: #FFF;
+}
