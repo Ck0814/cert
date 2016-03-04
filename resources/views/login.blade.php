@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>@yield('title', 'クライアント証明書管理ツール')</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
     <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -20,7 +21,7 @@
         </div>
         <hr />
         <div class="content">
-            <a href="#" class="btn btn-block btn-social btn-lg btn-google"><span class="fa fa-google"></span>Login with Google</a>
+            <a href="{{ route('issuance.index') }}" class="btn btn-block btn-social btn-lg btn-google"><span class="fa fa-google"></span>Login with Google</a>
         </div>
     </div>
     <script src="/js/jquery.min.js"></script>

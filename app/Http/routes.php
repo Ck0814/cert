@@ -16,18 +16,18 @@ $app->get('/', function () use ($app) {
 });
 
 // 自分の証明書情報
-$app->get('issuance/self', 'IssuanceController@self');
+$app->get('issuance/self', ['uses' => 'IssuanceController@self', 'as' => 'issuance.self']);
 // 自分の証明書発行Or更新
-$app->post('issuance/self', 'IssuanceController@commit');
+$app->post('issuance/self', ['uses' => 'IssuanceController@commit', 'as' => 'issuance.commit']);
 // 証明書発行関連Restful API
-$app->get('issuance', 'IssuanceController@index');
-$app->get('issuance/create', 'IssuanceController@create');
-$app->post('issuance', 'IssuanceController@store');
-$app->get('issuance/{id}', 'IssuanceController@show');
-$app->get('issuance/{id}/edit', 'IssuanceController@edit');
-$app->put('issuance/{id}', 'IssuanceController@update');
-$app->patch('issuance/{id}', 'IssuanceController@update');
-$app->delete('issuance/{id}', 'IssuanceController@destroy');
+$app->get('issuance', ['uses' => 'IssuanceController@index', 'as' => 'issuance.index']);
+$app->get('issuance/create', ['uses' => 'IssuanceController@create', 'as' => 'issuance.create']);
+$app->post('issuance', ['uses' => 'IssuanceController@store', 'as' => 'issuance.store']);
+$app->get('issuance/{id}', ['uses' => 'IssuanceController@show', 'as' => 'issuance.show']);
+$app->get('issuance/{id}/edit', ['uses' => 'IssuanceController@edit', 'as' => 'issuance.edit']);
+$app->put('issuance/{id}', ['uses' => 'IssuanceController@update', 'as' => 'issuance.update']);
+$app->patch('issuance/{id}', ['uses' => 'IssuanceController@update', 'as' => 'issuance.update']);
+$app->delete('issuance/{id}', ['uses' => 'IssuanceController@destroy', 'as' => 'issuance.destroy']);
 
 // 設定
 $app->get('config', function() use ($app) {

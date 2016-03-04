@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Issuance;
+use DB;
+
 class IssuanceController extends Controller
 {
 
@@ -20,7 +23,10 @@ class IssuanceController extends Controller
      */
     public function index()
     {
-        return 'index';
+        // Get the issuance records with common names
+        $issuances = Issuance::with(['owner', 'creator'])->orderBy('timeover_index');
+
+        return response()->json($issuances);
     }
 
     /**

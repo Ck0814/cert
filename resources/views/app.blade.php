@@ -20,7 +20,7 @@
         </div>
         <hr />
         <div class="content">
-            <a href="#" class="btn btn-block btn-social btn-lg btn-google"><span class="fa fa-google"></span>Login with Google</a>
+            <a href="{{ route('issuance.index') }}" class="btn btn-block btn-social btn-lg btn-google"><span class="fa fa-google"></span>Login with Google</a>
         </div>
     </div>
     <script src="/js/jquery.min.js"></script>
